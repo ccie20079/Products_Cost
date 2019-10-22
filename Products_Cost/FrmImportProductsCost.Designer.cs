@@ -19,7 +19,6 @@
             }
             base.Dispose(disposing);
         }
-
         #region Windows Form Designer generated code
 
         /// <summary>
@@ -57,7 +56,6 @@
             this.tbPath.Name = "tbPath";
             this.tbPath.Size = new System.Drawing.Size(1075, 38);
             this.tbPath.TabIndex = 1;
-            this.tbPath.TextChanged += new System.EventHandler(this.tbPath_TextChanged);
             // 
             // pb
             // 
@@ -114,15 +112,11 @@
             this.Name = "FrmImportProductsCost";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "导入成衣工价表";
-            this.Load += new System.EventHandler(this.FrmImportProductsCost_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
-
         }
-
         #endregion
-
         private System.Windows.Forms.Button btnImportProductsCost;
         private System.Windows.Forms.TextBox tbPath;
         private System.Windows.Forms.ProgressBar pb;

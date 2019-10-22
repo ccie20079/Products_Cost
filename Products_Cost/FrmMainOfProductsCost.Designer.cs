@@ -443,7 +443,6 @@
             // 
             // FrmMainOfProductsCost
             // 
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1337, 685);
             this.Controls.Add(this.toolStrip);
             this.Controls.Add(this.lblUserName);

@@ -871,14 +871,6 @@ namespace Products_Cost
             if (!float.TryParse(labours_cost_4r_9c, out labours_cost_4r_4c_f)) return false;
             return true;
         }
-        private void FrmImportProductsCost_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tbPath_TextChanged(object sender, EventArgs e)
-        {
-
-        }
+   
     }
 }
