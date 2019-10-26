@@ -35,6 +35,10 @@
     <ApplicationIcon>dukepu_logo.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Excel, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>public_dll_and_files\Excel.dll</HintPath>
+    </Reference>
     <Reference Include="Oracle.DataAccess, Version=2.102.2.20, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=x86">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>E:\oracle\product\10.2.0\client_1\ODP.NET\bin\2.x\Oracle.DataAccess.dll</HintPath>
@@ -50,12 +54,15 @@
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="Tools, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>public_dll_and_files\Tools.dll</HintPath>
+    </Reference>
     <Reference Include="UIAutomationProvider" />
     <Reference Include="WindowsBase" />
     <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
     <Compile Include="FormLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -178,19 +185,14 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="flexflow.cfg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\LoginSystem\LoginSystem.csproj">
       <Project>{69da687e-029c-476e-8771-fca56d5bda41}</Project>
       <Name>LoginSystem</Name>
-    </ProjectReference>
-    <ProjectReference Include="F:\tools\SFCSystem_通用版\SFCSystem_通用版\SFCSystem_通用版\Excel\Excel\Excel.csproj">
-      <Project>{b6115b10-3712-4534-8124-0027f28a5c8e}</Project>
-      <Name>Excel</Name>
-    </ProjectReference>
-    <ProjectReference Include="F:\tools\SFCSystem_通用版\SFCSystem_通用版\SFCSystem_通用版\Tools\Tools\Tools.csproj">
-      <Project>{f6a0dc14-7c22-4ab6-91c9-c5f7a9f90ca8}</Project>
-      <Name>Tools</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
@@ -209,15 +211,6 @@
       <VersionMinor>6</VersionMinor>
       <Lcid>0</Lcid>
       <WrapperTool>primary</WrapperTool>
-      <Isolated>False</Isolated>
-      <EmbedInteropTypes>True</EmbedInteropTypes>
-    </COMReference>
-    <COMReference Include="Office">
-      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
-      <VersionMajor>99</VersionMajor>
-      <VersionMinor>1</VersionMinor>
-      <Lcid>0</Lcid>
-      <WrapperTool>tlbimp</WrapperTool>
       <Isolated>False</Isolated>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </COMReference>
@@ -241,9 +234,22 @@
     </COMReference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="apps.ico" />
+    <Content Include="apps.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="code_Test.txt" />
-    <Content Include="dukepu_logo.ico" />
+    <Content Include="dukepu_logo.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="pictures\readme.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="public_dll_and_files\Excel.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="public_dll_and_files\Tools.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

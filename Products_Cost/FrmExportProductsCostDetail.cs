@@ -40,7 +40,6 @@ namespace Products_Cost
                                                    ) TEMP 
                                                 ORDER BY NLSSORT(product_name,'NLS_SORT= SCHINESE_PINYIN_M') ASC");
             System.Data.DataTable dt = OracleDaoHelper.getDTBySql(sqlStr);
-            
             cbPN.SelectedIndexChanged -= new System.EventHandler(cbPN_SelectedIndexChanged);
             this.cbPN.DataSource = dt;
             cbPN.DisplayMember = "Product_Name";

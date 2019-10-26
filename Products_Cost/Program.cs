@@ -27,7 +27,6 @@ namespace Products_Cost
         // Copyright © DGCZ  2019 . All rights reserved.
         // =====================================================================
         public static User_Info _userInfo;
-        static XmlFlexflow xff = new XmlFlexflow();
         /// <summary>
         /// 应用程序的主入口点。
         /// </summary>
@@ -36,8 +35,8 @@ namespace Products_Cost
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-          
-            string ftpIPADDR = xff.ReadXmlNodeValue("FTP_IPADDR");
+            XmlFlexflow.configFilePath = Application.StartupPath + "\\flexflow.cfg";
+            string ftpIPADDR = XmlFlexflow.ReadXmlNodeValue("FTP_IPADDR");
             //先测试是否可以ping通
             if (!ConnectByPing.pingTheAddress(ftpIPADDR))
             {
@@ -63,9 +62,9 @@ namespace Products_Cost
         /// </summary>
         static void doNext() {
             #region 数据库联接测试。
-            string host_Name = xff.ReadXmlNodeValue("SERVER_NAME");
-            string user_Id = xff.ReadXmlNodeValue("USER_ID");
-            string password = xff.ReadXmlNodeValue("PASSWORD");
+            string host_Name = XmlFlexflow.ReadXmlNodeValue("SERVER_NAME");
+            string user_Id = XmlFlexflow.ReadXmlNodeValue("USER_ID");
+            string password = XmlFlexflow.ReadXmlNodeValue("PASSWORD");
             //先测试是否可以ping通
             if (!ConnectByPing.pingTheAddress(host_Name))
             {

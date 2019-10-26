@@ -18,8 +18,8 @@ namespace LoginSystem
         {
            Application.EnableVisualStyles();
            Application.SetCompatibleTextRenderingDefault(false);
-           XmlFlexflow xff = new XmlFlexflow();
-           string ftpIPAddr = xff.ReadXmlNodeValue("FTP_IPADDR");
+           XmlFlexflow.configFilePath = Application.StartupPath + "\\flexflow.cfg";     
+           string ftpIPAddr = XmlFlexflow.ReadXmlNodeValue("FTP_IPADDR");
            //检查软件版本
            MSG msg = CheckVersionForApplication.checkVersionByPN(ftpIPAddr,Application.ProductName, Application.ProductVersion);
            if (!msg.Flag)
