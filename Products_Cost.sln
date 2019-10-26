@@ -13,7 +13,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SQL", "SQL", "{F36C0341-86C
 		SQL\Readme.txt = SQL\Readme.txt
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Products_Cost_Public_Class", "Products_Cost_Public_Class\Products_Cost_Public_Class.csproj", "{94813F68-7AC6-45DD-BA3D-AB198B4C7D9F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Products_Cost_Public_Class", "Products_Cost_Public_Class\Products_Cost_Public_Class.csproj", "{566F3A73-5DCF-4D59-B509-35AEB4CECD27}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,10 +29,10 @@ Global
 		{69DA687E-029C-476E-8771-FCA56D5BDA41}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{69DA687E-029C-476E-8771-FCA56D5BDA41}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{69DA687E-029C-476E-8771-FCA56D5BDA41}.Release|Any CPU.Build.0 = Release|Any CPU
-		{94813F68-7AC6-45DD-BA3D-AB198B4C7D9F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{94813F68-7AC6-45DD-BA3D-AB198B4C7D9F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{94813F68-7AC6-45DD-BA3D-AB198B4C7D9F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{94813F68-7AC6-45DD-BA3D-AB198B4C7D9F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{566F3A73-5DCF-4D59-B509-35AEB4CECD27}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{566F3A73-5DCF-4D59-B509-35AEB4CECD27}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{566F3A73-5DCF-4D59-B509-35AEB4CECD27}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{566F3A73-5DCF-4D59-B509-35AEB4CECD27}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

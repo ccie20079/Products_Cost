@@ -5,10 +5,7 @@ using System.Text;
 
 namespace Products_Cost_Public_Class
 {
-    class Program
+    public class Class1
     {
-        static void Main(string[] args)
-        {
-        }
     }
 }
