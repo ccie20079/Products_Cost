@@ -74,6 +74,12 @@ namespace Products_Cost
                 MessageBox.Show("您未选中成衣名称！", "提示：", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
+            //加载图片
+            cbPN_SelectedIndexChanged(sender, e);
+            if (CmdHelper.ifExistsTheProcessByName("EXCEL"))
+            {
+                return;
+            }
             //导出到Excel中
             string _defaultDir = System.Windows.Forms.Application.StartupPath + "\\成本汇总";
             string _fileName = cbPN.Text.Trim() + "_成本汇总.xls";
@@ -83,9 +89,7 @@ namespace Products_Cost
                 return;
             }
             //将图片存于粘贴板中。
-            
             Clipboard.SetImage(pictureBox.Image);
-
             System.Data.DataTable dt = (System.Data.DataTable)dgv.DataSource;
             string PN = dt.Rows[0]["成衣名称"].ToString();
             ExcelHelper.saveDtToExcelWithProgressBar((System.Data.DataTable)dgv.DataSource, xlsFilePath,pb);

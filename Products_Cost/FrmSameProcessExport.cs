@@ -44,6 +44,9 @@ namespace Products_Cost
 
         private void exportToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            if (CmdHelper.ifExistsTheProcessByName("EXCEL")) {
+                return;
+            }
             string _fileName = "同名工序_" + DateTime.Now.ToString("yyyy-MM-dd") + ".xls";
             xlsFilePath = FileNameDialog.getSaveFileNameWithDefaultDir("同名工序汇总：", "*.xls|*.xls", defaultDir, _fileName);
             if (!xlsFilePath.Contains(@"\"))
@@ -55,7 +58,6 @@ namespace Products_Cost
             //((FrmMainOfProductsCost)this.ParentForm).notifyIcon.ShowBalloonTip(7000, "提示：","汇总保存于: " + xlsFilePath, ToolTipIcon.Info);
             ShowResult.show(lblResult, "汇总保存于: " + xlsFilePath, true);
             timerRestoreLblResult.Start();
-
         }
 
         private void FrmSameProcessExport_Load(object sender, EventArgs e)

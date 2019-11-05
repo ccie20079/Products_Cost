@@ -14,6 +14,26 @@ namespace Excel
     /// </summary>
     public class MyExcel
     {
+        #region Version Info
+        //=====================================================================
+        // Project Name        :    Excel  
+        // Project Description : 
+        // Class Name          :    test
+        // File Name           :    test
+        // Namespace           :    Excel 
+        // Class Version       :    v1.0.0.0
+        // Class Description   : 
+        // CLR                 :    4.0.30319.42000  
+        // Author              :    董   魁  (ccie20079@126.com)
+        // Addr                :    中国  陕西 咸阳    
+        // Create Time         :    2019-10-22 14:54:21
+        // Modifier:     
+        // Update Time         :    2019-10-22 14:54:21
+        //======================================================================
+        // Copyright © DGCZ  2019 . All rights reserved.
+        // =====================================================================
+        #endregion
+
         private string _path;
         Microsoft.Office.Interop.Excel.ApplicationClass _app = null;
         Microsoft.Office.Interop.Excel.Workbook _wBook = null;

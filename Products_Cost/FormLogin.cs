@@ -1,14 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
+﻿using LoginSystem.Helper;
+using System;
 using System.Windows.Forms;
-using LoginSystem.Helper;
-using Tools;
-using Products_Cost.Helper;
 namespace Products_Cost
 {
     public partial class FormLogin : Form

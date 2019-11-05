@@ -261,7 +261,6 @@ namespace Products_Cost
         public void import_P_C_Record_Of_First_Sheet()
         {
             if (CmdHelper.ifExistsTheProcessByName("EXCEL")) {
-                MessageBox.Show("请先关闭已经打开的Excel!");
                 return;
             }
             string xlsFilePath = FileNameDialog.getSelectedFilePathWithDefaultDir("请选择成衣成本记录：", "*.xls,*.xlsx|*.xls;*.xlsx", defaultDir);
@@ -457,7 +456,7 @@ namespace Products_Cost
             ShowResult.show(lblResult, "已经提交！", true);
             timerRestoreLblResult.Enabled = true;
             lblPromptForPB.Visible = false;
-
+            //默认提交 pictures下的 waiting.jpg图片。
             //保存或更新其对应的图片。
             if (!FrmProductsCostSummary.ifExistsRecordOfProducts_Picture(PN))
             {
@@ -466,7 +465,6 @@ namespace Products_Cost
             else {
                 FrmProductsCostSummary.updatePictureOfProduct(PN, System.Windows.Forms.Application.StartupPath + "\\pictures\\waiting.jpg");
             }
-
         }
         /// <summary>
         /// 导入

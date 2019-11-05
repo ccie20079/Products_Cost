@@ -1,10 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using LoginSystem.Entities;
+using System;
 using System.Windows.Forms;
 using Tools;
-using LoginSystem.Entities;
-using Products_Cost.Helper;
 namespace Products_Cost
 {
     static class Program
@@ -63,6 +60,7 @@ namespace Products_Cost
         static void doNext() {
             #region 数据库联接测试。
             string host_Name = XmlFlexflow.ReadXmlNodeValue("SERVER_NAME");
+            string service_Name = XmlFlexflow.ReadXmlNodeValue("SERVICE_NAME");
             string user_Id = XmlFlexflow.ReadXmlNodeValue("USER_ID");
             string password = XmlFlexflow.ReadXmlNodeValue("PASSWORD");
             //先测试是否可以ping通
@@ -73,7 +71,7 @@ namespace Products_Cost
             }
             #endregion
             //再这个启动类里，对对象进行初始化。
-            OracleDaoHelper daoHelper = new OracleDaoHelper(host_Name, user_Id, password);
+            OracleDaoHelper daoHelper = new OracleDaoHelper(host_Name,service_Name, user_Id, password);
             FormLogin frmLogin = new FormLogin();
             frmLogin.ShowDialog();
             if (DialogResult.OK != frmLogin.DialogResult)

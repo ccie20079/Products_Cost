@@ -64,6 +64,10 @@ namespace Products_Cost
         {
             OracleHelper oH = OracleHelper.getBaseDao();
             if (string.IsNullOrEmpty(cbPN.Text.Trim())) return;
+            if (CmdHelper.ifExistsTheProcessByName("EXCEL"))
+            {
+                return;
+            }
             //获取该成品对应的工序。
             System.Data.DataTable dt = null;
             OracleParameter paramPN = new OracleParameter("v_PN", OracleDbType.NVarchar2, 20);
